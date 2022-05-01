@@ -38,6 +38,7 @@ dispatchCodes = {
 	["jewelryrobbery"] =  {displayCode = '10-90', description = "Jewelry Store Robbery In Progress", radius = 0, recipientList = {'police'}, blipSprite = 617, blipColour = 1, blipScale = 1.2, blipLength = 1.5, sound = "Lose_1st", sound2 = "GTAO_FM_Events_Soundset", offset = "false"},
 	["truckrobbery"] =  {displayCode = '10-90', description = "Truck Robbery In Progress", radius = 0, recipientList = {'police'}, blipSprite = 67, blipColour = 1, blipScale = 1.2, blipLength = 1.5, sound = "Lose_1st", sound2 = "GTAO_FM_Events_Soundset", offset = "false"},
 	["drugsale"] =  {displayCode = '10-60', description = "Possible Drug Deal", radius = 120.0, recipientList = {'police'}, blipSprite = 469, blipColour = 52, blipScale = 0, blipLength = 1.5, sound = "Lose_1st", sound2 = "GTAO_FM_Events_Soundset", offset = "true"},
+	["civdead"] =  {displayCode = '10-69', description = "Civilan Bled Out", radius = 0, recipientList = {'ambulance'}, blipSprite = 126, blipColour = 3, blipScale = 1.5, blipLength = 2, sound = "dispatch"},
 	
 	-- Rainmad Heists
 
