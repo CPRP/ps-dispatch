@@ -23,6 +23,31 @@ local function VehicleTheft(vehicle)
     })
 end exports('VehicleTheft', VehicleTheft)
 
+local function VehicleSpotted(vehicle)
+    local vehdata = vehicleData(vehicle)
+    local currentPos = GetEntityCoords(PlayerPedId())
+    local locationInfo = getStreetandZone(currentPos)
+    local heading = getCardinalDirectionFromHeading()
+    TriggerServerEvent("dispatch:server:notify",{
+        dispatchcodename = "vehiclespotted", -- has to match the codes in sv_dispatchcodes.lua so that it generates the right blip
+        dispatchCode = "10-35",
+        firstStreet = locationInfo,
+        model = vehdata.name, -- vehicle name
+        plate = vehdata.plate, -- vehicle plate
+        priority = 2, 
+        firstColor = vehdata.colour, -- vehicle color
+        heading = heading, 
+        automaticGunfire = false,
+        origin = {
+            x = currentPos.x,
+            y = currentPos.y,
+            z = currentPos.z
+        },
+        dispatchMessage = "Vehicle Spotted",
+        job = {"police"}
+    })
+end exports('VehicleSpotted', VehicleSpotted)
+
 local function VehicleShooting(vehdata)
     local vehicle = QBCore.Functions.GetClosestVehicle()
     local vehdata = vehicleData(vehicle)
