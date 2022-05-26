@@ -68,7 +68,7 @@ https://www.discord.gg/projectsloth
 
 - exports['ps-dispatch']:VehicleTheft(vehicle)
 
-- exports['qb-dispatch']:ArmoredTruckRobbery(vehicle)
+- exports['ps-dispatch']:ArmoredTruckRobbery(vehicle)
 
 ```
 
