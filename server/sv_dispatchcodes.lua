@@ -42,6 +42,7 @@ dispatchCodes = {
 	["drugsale"] =  {displayCode = '10-60', description = "Possible Drug Deal", radius = 120.0, recipientList = {'police'}, blipSprite = 469, blipColour = 52, blipScale = 0, blipLength = 1.5, sound = "Lose_1st", sound2 = "GTAO_FM_Events_Soundset", offset = "true"},
 	["civdead"] =  {displayCode = '10-69', description = "Civilan Bled Out", radius = 0, recipientList = {'ambulance'}, blipSprite = 126, blipColour = 3, blipScale = 1.5, blipLength = 2, sound = "dispatch"},
 	["vehiclespotted"] =  {displayCode = '10-35', description = "Vehicle Plate Spotted", radius = 0, recipientList = {'police'}, blipSprite = 225, blipColour = 1, blipScale = 1.2, blipLength = 2, sound = "Lose_1st", sound2 = "GTAO_FM_Events_Soundset", offset = "false"},
+	["armoredtruckrobbery"] =  {displayCode = '10-35', description = "Armored Truck Robbery", radius = 0, recipientList = {'police'}, blipSprite = 447, blipColour = 1, blipScale = 1.2, blipLength = 2, sound = "Lose_1st", sound2 = "GTAO_FM_Events_Soundset", offset = "false"},
 	
 	-- Rainmad Heists
 
