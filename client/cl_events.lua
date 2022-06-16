@@ -270,7 +270,7 @@ local function InjuriedPerson()
             z = currentPos.z
         },
         dispatchMessage = _U('persondown'), -- message
-        job = { "ambulance" } -- jobs that will get the alerts
+        job = { "police", "ambulance" } -- jobs that will get the alerts
     })
 end
 
@@ -296,7 +296,7 @@ local function DeceasedPerson()
             z = currentPos.z
         },
         dispatchMessage = "Civilian Bled Out", -- message
-        job = { "ambulance" } -- jobs that will get the alerts
+        job = { "police", "ambulance" } -- jobs that will get the alerts
     })
 end
 
@@ -597,7 +597,7 @@ local function OfficerDown()
             z = currentPos.z
         },
         dispatchMessage = _U('officerdown'), -- message
-        job = { "ambulance" } -- jobs that will get the alerts
+        job = { "police", "ambulance" } -- jobs that will get the alerts
     })
 end
 
@@ -629,7 +629,7 @@ local function EmsDown()
             z = currentPos.z
         },
         dispatchMessage = _U('emsdown'), -- message
-        job = { "ambulance" } -- jobs that will get the alerts
+        job = { "police", "ambulance" } -- jobs that will get the alerts
     })
 end
 
