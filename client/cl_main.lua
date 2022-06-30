@@ -219,11 +219,19 @@ RegisterNetEvent('dispatch:clNotify', function(sNotificationData, sNotificationI
 						timer = 5000,
 						isPolice = IsPoliceJob(PlayerJob.name)
 					})
+					Waypoint = vector2(sNotificationData.origin.x, sNotificationData.origin.y)
+					Citizen.Wait(5000)
+					Waypoint = nil
 				end
 			end
         end
     end
 end)
+
+RegisterCommand('setdispatchgps', function()
+	if Waypoint then SetWaypointOff() SetNewWaypoint(Waypoint.x, Waypoint.y) end
+end, false)
+RegisterKeyMapping('setdispatchgps', 'Set waypoint', 'keyboard', 'Y')
 
 RegisterNetEvent("ps-dispatch:client:AddCallBlip")
 AddEventHandler("ps-dispatch:client:AddCallBlip", function(coords, data, blipId)
