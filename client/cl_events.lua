@@ -617,7 +617,7 @@ local function OfficerDown()
             z = currentPos.z
         },
         dispatchMessage = _U('officerdown'), -- message
-        job = { "police", "ambulance" } -- jobs that will get the alerts
+        job = { "ambulance", "police" } -- jobs that will get the alerts
     })
 end
 
@@ -649,7 +649,7 @@ local function EmsDown()
             z = currentPos.z
         },
         dispatchMessage = _U('emsdown'), -- message
-        job = { "police", "ambulance" } -- jobs that will get the alerts
+        job = { "ambulance", "police" } -- jobs that will get the alerts
     })
 end
 
@@ -678,7 +678,7 @@ local function Explosion()
             y = currentPos.y,
             z = currentPos.z
         },
-        dispatchMessage = "EXPLOSION REPORTED", -- message
+        dispatchMessage = "Explosion Reported", -- message
         job = { "police" } -- jobs that will get the alerts
     })
 end
