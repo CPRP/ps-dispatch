@@ -1,4 +1,4 @@
-# Beta Released
+# QBCore Dispatch
 
 Integrated with https://github.com/Project-Sloth/ps-mdt
 
@@ -71,6 +71,8 @@ https://www.discord.gg/projectsloth
 - exports['ps-dispatch']:ArmoredTruckRobbery(vehicle)
 
 - exports['ps-dispatch']:SuspiciousActivity()
+
+- exports['ps-dispatch']:SignRobbery()
 ```
 
 # Steps to Create New Alert
