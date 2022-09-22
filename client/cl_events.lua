@@ -710,6 +710,32 @@ end
 
 exports('SuspiciousActivity', SuspiciousActivity)
 
+local function Fire()
+    local currentPos = GetEntityCoords(PlayerPedId())
+    local locationInfo = getStreetandZone(currentPos)
+    local gender = GetPedGender()
+    TriggerServerEvent("dispatch:server:notify", {
+        dispatchcodename = "fire", -- has to match the codes in sv_dispatchcodes.lua so that it generates the right blip
+        dispatchCode = "10-80",
+        firstStreet = locationInfo,
+        gender = nil,
+        model = nil,
+        plate = nil,
+        priority = 2, -- priority
+        firstColor = nil,
+        automaticGunfire = false,
+        origin = {
+            x = currentPos.x,
+            y = currentPos.y,
+            z = currentPos.z
+        },
+        dispatchMessage = "Fire Reported", -- message
+        job = { "ambulance" } -- jobs that will get the alerts
+    })
+end
+
+exports('Fire', Fire)
+
 local function CustomAlert(data)
 
     local coords = data.coords or vec3(0.0, 0.0, 0.0)
