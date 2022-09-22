@@ -45,7 +45,8 @@ dispatchCodes = {
 	["drugsale"] =  {displayCode = '10-60', description = "Possible Drug Deal", radius = 120.0, recipientList = {'police'}, blipSprite = 469, blipColour = 52, blipScale = 0, blipLength = 1.5, sound = "Lose_1st", sound2 = "GTAO_FM_Events_Soundset", offset = "true"},
 	["vehiclespotted"] =  {displayCode = '10-35', description = "Vehicle Plate Spotted", radius = 0, recipientList = {'police'}, blipSprite = 225, blipColour = 1, blipScale = 1.2, blipLength = 2, sound = "Lose_1st", sound2 = "GTAO_FM_Events_Soundset", offset = "false"},
 	["armoredtruckrobbery"] =  {displayCode = '10-35', description = "Armored Truck Robbery", radius = 0, recipientList = {'police'}, blipSprite = 447, blipColour = 1, blipScale = 1.2, blipLength = 2, sound = "Lose_1st", sound2 = "GTAO_FM_Events_Soundset", offset = "false"},
-
+	["fire"] =  {displayCode = '10-80', description = "Fire Reported", radius = 0, recipientList = {'ambulance'}, blipSprite = 436, blipColour = 1, blipScale = 1.5, blipLength = 1, sound = "Lose_1st", sound2 = "GTAO_FM_Events_Soundset", offset = "false", blipflash = "false"},
+	
 	-- Rainmad Heists
 
 	["artgalleryrobbery"] =  {displayCode = '10-90', description = "Art Gallery Robbery In Progress", radius = 0, recipientList = {'police'}, blipSprite = 269, blipColour = 59, blipScale = 1.5, blipLength = 2, sound = "robberysound", offset = "false", blipflash = "false"},
