@@ -1,3 +1,31 @@
+local QBCore = exports['qb-core']:GetCoreObject()
+PlayerData = {}
+PlayerJob = {}
+
+AddEventHandler('onResourceStart', function(resourceName)
+    if GetCurrentResourceName() == resourceName then
+        PlayerData = QBCore.Functions.GetPlayerData()
+        PlayerJob = QBCore.Functions.GetPlayerData().job
+    end
+end)
+
+RegisterNetEvent("QBCore:Client:OnPlayerLoaded", function()
+    PlayerData = QBCore.Functions.GetPlayerData()
+    PlayerJob = QBCore.Functions.GetPlayerData().job
+end)
+
+RegisterNetEvent('QBCore:Client:OnPlayerUnload', function()
+    PlayerData = {}
+    currentCallSign = ""
+end)
+
+RegisterNetEvent("QBCore:Client:OnJobUpdate", function(JobInfo)
+    PlayerData = QBCore.Functions.GetPlayerData()
+    PlayerJob = JobInfo
+end)
+
+----ADDED ABOVE FOR REMOVING POLICE SHOOTING CALLS----
+
 CreateThread(function()
 	local vehicleWhitelist = {[0]=true,[1]=true,[2]=true,[3]=true,[4]=true,[5]=true,[6]=true,[7]=true,[8]=true,[9]=true,[10]=true,[11]=true,[12]=true,[17]=true,[19]=true,[20]=true}
 	local sleep = 100
