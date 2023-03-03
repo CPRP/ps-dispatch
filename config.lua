@@ -76,6 +76,7 @@ Citizen.CreateThread(function()
         'WEAPON_HAZARDCAN',
         'WEAPON_RAYCARBINE',
         'WEAPON_STUNGUN'
+        'WEAPON_TASER'
     }
 
     Config.Colours = {
