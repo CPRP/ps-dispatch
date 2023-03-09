@@ -710,18 +710,24 @@ end
 
 exports('SuspiciousActivity', SuspiciousActivity)
 
-local function Fire()
+local function Hunting()
     local currentPos = GetEntityCoords(PlayerPedId())
     local locationInfo = getStreetandZone(currentPos)
     local gender = GetPedGender()
+    local PlayerPed = PlayerPedId()
+    local CurrentWeapon = GetSelectedPedWeapon(PlayerPed)
+    local speed = math.floor(GetEntitySpeed(vehicle) * 2.236936) .. " MPH" -- * 3.6 = KMH    /    * 2.236936 = MPH
+    local weapon = WeaponTable[CurrentWeapon] or "UNKNOWN"
+
     TriggerServerEvent("dispatch:server:notify", {
-        dispatchcodename = "fire", -- has to match the codes in sv_dispatchcodes.lua so that it generates the right blip
-        dispatchCode = "10-80",
+        dispatchcodename = "hunting", -- has to match the codes in sv_dispatchcodes.lua so that it generates the right blip
+        dispatchCode = "10-13",
         firstStreet = locationInfo,
-        gender = nil,
+        gender = gender,
+        weapon = weapon,
         model = nil,
         plate = nil,
-        priority = 2, -- priority
+        priority = 2,
         firstColor = nil,
         automaticGunfire = false,
         origin = {
@@ -729,12 +735,13 @@ local function Fire()
             y = currentPos.y,
             z = currentPos.z
         },
-        dispatchMessage = "Fire Reported", -- message
-        job = { "ambulance" } -- jobs that will get the alerts
+        dispatchMessage = _U('hunting'),
+        job = { "police" }
     })
+
 end
 
-exports('Fire', Fire)
+exports('Hunting', Hunting)
 
 local function CustomAlert(data)
 
