@@ -16,6 +16,11 @@ client_scripts{
     'client/cl_extraalerts.lua',
     'client/cl_commands.lua',
     'client/cl_loops.lua',
+    '@PolyZone/client.lua',
+    '@PolyZone/BoxZone.lua',
+    '@PolyZone/EntityZone.lua',
+    '@PolyZone/CircleZone.lua',
+    '@PolyZone/ComboZone.lua',
 } 
 server_script {
     'server/sv_dispatchcodes.lua',
