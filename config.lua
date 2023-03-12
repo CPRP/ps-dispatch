@@ -3,12 +3,12 @@ Config = {}
 Config.Enable = {}
 Config.Timer = {}
 
-Config.PoliceJob = { "police", "bcso"}
+Config.PoliceJob = { "police", "bcso", "lspd", "sasp", "sapr" }
 
 -- Enable if you only want to send alerts to onDuty officers
 Config.OnDutyOnly = false
 
-Config.PoliceAndAmbulance = { "police", "ambulance", "bcso"}
+Config.PoliceAndAmbulance = { "police", "ambulance", "bcso", "lspd", "sasp", "sapr" }
 Config.PhoneModel = 'prop_npc_phone_02'
 
 -- sets report chance to 100%
@@ -38,7 +38,9 @@ Config.MaxOffset = 120
 -- locations for the hunting zones ( Label: Name of Blip // Radius: Radius of the Alert and Blip)
 Config.Locations = {
     ["hunting"] = {
-        [1] = {label = "Hunting Zone", radius = 250.0, coords = vector3(-1339.05, -3044.38, 13.94)},
+        [1] = {label = "Hunting Zone", radius = 600.0, coords = vector3(-481.62, 4910.7, 167.28)},
+        [2] = {label = "Hunting Zone", radius = 950.0, coords = vector3(772.84, 5461.14, 560.19)},
+        [3] = {label = "Hunting Zone", radius = 950.0, coords = vector3(-1186.72, 3853.52, 489.94)},
     },
 }
 
@@ -84,7 +86,7 @@ Citizen.CreateThread(function()
         'WEAPON_FIREEXTINGUISHER',
         'WEAPON_HAZARDCAN',
         'WEAPON_RAYCARBINE',
-        'WEAPON_STUNGUN'
+        'WEAPON_STUNGUN',
         'WEAPON_TASER'
     }
 
