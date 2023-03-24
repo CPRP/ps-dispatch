@@ -85,7 +85,7 @@ local function VehicleTheft(vehicle)
             z = currentPos.z
         },
         dispatchMessage = _U('vehicletheft'),
-        job = { "police", "bcso", "sasp", "sapr" } -- jobs that will get the alerts
+        job = { "police", "bcso", "sasp", "sapr", "LEO" }
     })
 end
 
@@ -177,7 +177,7 @@ local function VehicleShooting(vehdata)
             z = currentPos.z
         },
         dispatchMessage = _U('vehicleshots'),
-        job = { "police", "bcso", "sasp", "sapr" } -- jobs that will get the alerts
+        job = { "police", "bcso", "sasp", "sapr", "LEO" }
     })
 end
 
@@ -210,7 +210,7 @@ local function Shooting()
             z = currentPos.z
         },
         dispatchMessage = _U('shooting'),
-        job = { "police", "bcso", "sasp", "sapr" } -- jobs that will get the alerts
+        job = { "police", "bcso", "sasp", "sapr", "LEO" }
     })
 
 end
@@ -237,7 +237,7 @@ local function SpeedingVehicle(vehdata)
             z = currentPos.z
         },
         dispatchMessage = _U('speeding'),
-        job = { "police", "bcso", "sasp", "sapr" } -- jobs that will get the alerts
+        job = { "police", "bcso", "sasp", "sapr", "LEO" }
     })
 end
 
@@ -263,7 +263,7 @@ local function Fight()
             z = currentPos.z
         },
         dispatchMessage = _U('melee'),
-        job = { "police", "bcso", "sasp", "sapr" } -- jobs that will get the alerts
+        job = { "police", "bcso", "sasp", "sapr", "LEO" }
     })
 end
 
@@ -289,7 +289,7 @@ local function InjuriedPerson()
             z = currentPos.z
         },
         dispatchMessage = _U('persondown'), -- message
-        job = { "police", "ambulance", "bcso", "sasp", "sapr" } -- jobs that will get the alerts
+        job = {"EMS", "ambulance"} -- type or jobs that will get the alerts
     })
 end
 
@@ -315,7 +315,7 @@ local function DeceasedPerson()
             z = currentPos.z
         },
         dispatchMessage = "Civilian Bled Out", -- message
-        job = { "police", "ambulance", "bcso", "sasp", "sapr" } -- jobs that will get the alerts
+        job = {"EMS", "ambulance"} -- type or jobs that will get the alerts
     })
 end
 
@@ -342,7 +342,7 @@ local function StoreRobbery(camId)
             z = currentPos.z
         },
         dispatchMessage = _U('storerobbery'), -- message
-        job = { "police", "bcso", "sasp", "sapr" } -- jobs that will get the alerts -- jobs that will get the alerts
+        job = { "police", "bcso", "sasp", "sapr", "LEO" } -- type or jobs that will get the alerts
     })
 end
 
@@ -369,7 +369,7 @@ local function FleecaBankRobbery(camId)
             z = currentPos.z
         },
         dispatchMessage = _U('fleecabank'), -- message
-        job = { "police", "bcso", "sasp", "sapr" } -- jobs that will get the alerts -- jobs that will get the alerts
+        job = { "police", "bcso", "sasp", "sapr", "LEO" } -- type or jobs that will get the alerts
     })
 end
 
@@ -396,7 +396,7 @@ local function PaletoBankRobbery(camId)
             z = currentPos.z
         },
         dispatchMessage = _U('paletobank'), -- message
-        job = { "police", "bcso", "sasp", "sapr" } -- jobs that will get the alerts -- jobs that will get the alerts
+        job = { "police", "bcso", "sasp", "sapr", "LEO" } -- type or jobs that will get the alerts
     })
 end
 
@@ -423,7 +423,7 @@ local function PacificBankRobbery(camId)
             z = currentPos.z
         },
         dispatchMessage = _U('pacificbank'), -- message
-        job = { "police", "bcso", "sasp", "sapr" } -- jobs that will get the alerts -- jobs that will get the alerts
+        job = { "police", "bcso", "sasp", "sapr", "LEO" } -- type or jobs that will get the alerts
     })
 end
 
@@ -449,7 +449,7 @@ local function PrisonBreak()
             z = currentPos.z
         },
         dispatchMessage = _U('prisonbreak'), -- message
-        job = { "police", "bcso", "sasp", "sapr" } -- jobs that will get the alerts -- jobs that will get the alerts
+        job = { "police", "bcso", "sasp", "sapr", "LEO" } -- type or jobs that will get the alerts
     })
 end
 
@@ -477,7 +477,7 @@ local function VangelicoRobbery(camId)
             z = currentPos.z
         },
         dispatchMessage = _U('vangelico'), -- message
-        job = { "police", "bcso", "sasp", "sapr" } -- jobs that will get the alerts -- jobs that will get the alerts
+        job = { "police", "bcso", "sasp", "sapr", "LEO" } -- type or jobs that will get the alerts
     })
 end
 
@@ -503,7 +503,7 @@ local function HouseRobbery()
             z = currentPos.z
         },
         dispatchMessage = _U('houserobbery'), -- message
-        job = { "police", "bcso", "sasp", "sapr" } -- jobs that will get the alerts -- jobs that will get the alerts
+        job = { "police", "bcso", "sasp", "sapr", "LEO" } -- type or jobs that will get the alerts
     })
 end
 
@@ -529,7 +529,7 @@ local function YachtHeist()
             z = currentPos.z
         },
         dispatchMessage = _U('yachtheist'), -- message
-        job = { "police", "bcso", "sasp", "sapr" } -- jobs that will get the alerts -- jobs that will get the alerts
+        job = { "police", "bcso", "sasp", "sapr", "LEO" } -- type or jobs that will get the alerts
     })
 end
 
@@ -555,7 +555,7 @@ local function DrugSale()
             z = currentPos.z
         },
         dispatchMessage = _U('drugsell'), -- message
-        job = { "police", "bcso", "sasp", "sapr" } -- jobs that will get the alerts -- jobs that will get the alerts
+        job = { "police", "bcso", "sasp", "sapr", "LEO" } -- type or jobs that will get the alerts
     })
 end
 
@@ -588,7 +588,7 @@ local function CarJacking(vehicle)
             z = currentPos.z
         },
         dispatchMessage = _U('carjacking'),
-        job = { "police", "bcso", "sasp", "sapr" } -- jobs that will get the alerts
+        job = { "police", "bcso", "sasp", "sapr", "LEO" } -- type or jobs that will get the alerts
     })
 end
 
@@ -616,7 +616,7 @@ local function OfficerDown()
             z = currentPos.z
         },
         dispatchMessage = _U('officerdown'), -- message
-        job = { "ambulance", "police", "bcso", "sasp", "sapr" } -- jobs that will get the alerts
+        job = {"FirstResponder"} -- type or jobs that will get the alerts
     })
 end
 
@@ -648,7 +648,7 @@ local function EmsDown()
             z = currentPos.z
         },
         dispatchMessage = _U('emsdown'), -- message
-        job = { "ambulance", "police", "bcso", "sasp", "sapr" } -- jobs that will get the alerts
+        job = {"FirstResponder"} -- type or jobs that will get the alerts
     })
 end
 
@@ -678,7 +678,7 @@ local function Explosion()
             z = currentPos.z
         },
         dispatchMessage = "Explosion Reported", -- message
-        job = { "police", "bcso", "sasp", "sapr" } -- jobs that will get the alerts -- jobs that will get the alerts
+        job = { "police", "bcso", "sasp", "sapr", "LEO" } -- type or jobs that will get the alerts
     })
 end
 
@@ -704,7 +704,7 @@ local function SuspiciousActivity()
             z = currentPos.z
         },
         dispatchMessage = _U('susactivity'), -- message
-        job = { "police", "bcso", "sasp", "sapr" } -- jobs that will get the alerts -- jobs that will get the alerts
+        job = { "police", "bcso", "sasp", "sapr", "LEO" } -- type or jobs that will get the alerts
     })
 end
 
@@ -736,7 +736,7 @@ local function Hunting()
             z = currentPos.z
         },
         dispatchMessage = _U('hunting'),
-        job = { "police", "bcso", "sasp", "sapr" } -- jobs that will get the alerts
+        job = { "police", "bcso", "sasp", "sapr", "LEO" } -- type or jobs that will get the alerts
     })
 
 end
@@ -748,7 +748,7 @@ local function CustomAlert(data)
     local coords = data.coords or vec3(0.0, 0.0, 0.0)
     local gender = GetPedGender()
     if not data.gender then gender = nil end 
-    local job = { "police" }
+    local job = { "police", "bcso", "sasp", "sapr", "LEO" }
     if data.job then job = data.job end
 
 
