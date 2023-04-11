@@ -315,7 +315,7 @@ local function DeceasedPerson()
             z = currentPos.z
         },
         dispatchMessage = "Civilian Bled Out", -- message
-        job = {"EMS", "ambulance"} -- type or jobs that will get the alerts
+        job = { "police", "bcso", "sasp", "sapr", "EMS", "ambulance" } -- type or jobs that will get the alerts
     })
 end
 
@@ -342,7 +342,7 @@ local function StoreRobbery(camId)
             z = currentPos.z
         },
         dispatchMessage = _U('storerobbery'), -- message
-        job = { "police", "bcso", "sasp", "sapr", "LEO" } -- type or jobs that will get the alerts
+        job = { "police", "bcso", "sasp", "sapr", "LEO", "EMS", "ambulance" } -- type or jobs that will get the alerts
     })
 end
 
@@ -616,7 +616,7 @@ local function OfficerDown()
             z = currentPos.z
         },
         dispatchMessage = _U('officerdown'), -- message
-        job = {"FirstResponder"} -- type or jobs that will get the alerts
+        job = { "police", "bcso", "sasp", "sapr", "LEO", "ambulancs", "EMS" } -- type or jobs that will get the alerts
     })
 end
 
@@ -648,7 +648,7 @@ local function EmsDown()
             z = currentPos.z
         },
         dispatchMessage = _U('emsdown'), -- message
-        job = {"FirstResponder"} -- type or jobs that will get the alerts
+        job = { "police", "bcso", "sasp", "sapr", "LEO", "ambulancs", "EMS" } -- type or jobs that will get the alerts
     })
 end
 
