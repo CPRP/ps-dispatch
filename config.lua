@@ -24,7 +24,7 @@ Config.ExplosionTypes = {9}
 -- Enable default alerts
 Config.Enable.Speeding = true
 Config.Enable.Shooting = true
-Config.Enable.Autotheft = true
+Config.Enable.Autotheft = false
 Config.Enable.Melee = true
 Config.Enable.PlayerDowned = true
 
