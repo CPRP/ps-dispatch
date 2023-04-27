@@ -289,7 +289,7 @@ local function InjuriedPerson()
             z = currentPos.z
         },
         dispatchMessage = _U('persondown'), -- message
-        job = {"EMS", "ambulance"} -- type or jobs that will get the alerts
+        job = {"EMS", "ambulance", "police", "bcso", "sasp", "sapr", "LEO"} -- type or jobs that will get the alerts
     })
 end
 
