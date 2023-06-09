@@ -1,4 +1,5 @@
 local QBCore = exports['qb-core']:GetCoreObject()
+local inpaintballmatch = false  -- ADDED FOR PUG BATTLEROYAL SCRIPT (NEXT 6 LINES)
 PlayerData = {}
 PlayerJob = {}
 
@@ -22,6 +23,16 @@ end)
 RegisterNetEvent("QBCore:Client:OnJobUpdate", function(JobInfo)
     PlayerData = QBCore.Functions.GetPlayerData()
     PlayerJob = JobInfo
+end)
+
+RegisterNetEvent("Pug:client:InPaintBallMatchWL")  -- ADDED FOR PUG BATTLEROYAL SCRIPT (NEXT 6 LINES)
+AddEventHandler("Pug:client:InPaintBallMatchWL", function() -- put this in you police calls for not recieving shots fired while playing paintball
+    inpaintballmatch = true
+end)
+
+RegisterNetEvent("Pug:client:InPaintBallMatchWLFalse")  -- ADDED FOR PUG BATTLEROYAL SCRIPT (NEXT 6 LINES)
+AddEventHandler("Pug:client:InPaintBallMatchWLFalse", function() -- put this in you police calls for recieving shots fired again after exiting paintball
+    inpaintballmatch = false
 end)
 
 ----ADDED ABOVE FOR REMOVING POLICE SHOOTING CALLS----
